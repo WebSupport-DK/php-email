@@ -17,9 +17,9 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>. 
  */ 
 
-namespace thom855j\mail ; 
+namespace thom855j\PHPEmail ; 
 
-class PHPMail 
+class Mail
 { 
 
     public 
