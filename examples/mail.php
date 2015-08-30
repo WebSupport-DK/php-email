@@ -1,6 +1,6 @@
 <?php
 require_once '../Mail.php';
-$mailer = new Mail() ; 
+$mailer = new thom855j\PHPEmail\Mail() ; 
 
 $mailer->Host       = 'smtp.gmail.com' ; 
 $mailer->SMTPAuth   = true ; 
@@ -11,7 +11,7 @@ $mailer->Password   = 'password' ;
 $mailer->From       = 'test@mail.com' ; 
 $mailer->isHTML( true ) ; 
 
-$mail = new thom855j\mail\MailWrapper( $mailer ) ; 
+$mail = new thom855j\PHPEmail\MailWrapper( $mailer ) ; 
 
 $template = 'welcome_email.php' ; 
 $data     = array( 'Name' => 'Test' ) ; 
