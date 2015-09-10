@@ -1,6 +1,6 @@
 <?php 
 
-namespace thom855j\php_email ; 
+namespace thom855j\PHPEmail ; 
 
 class Message 
 { 
