@@ -1,1 +1,0 @@
-Chose either PHPMailer or Mail class

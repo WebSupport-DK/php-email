@@ -1,5 +1,5 @@
 <?php
-require_once '../Mail.php';
+require_once '../src/Mail.php';
 $mailer = new thom855j\PHPEmail\Mail() ; 
 
 $mailer->Host       = 'smtp.gmail.com' ; 
