@@ -1,0 +1,8 @@
+{
+        "name": "thom855j/php-email",
+        "license": "MIT",
+        "description": "Simple email classes and wrappers",
+        "require": {
+        "php": ">=5.4.0"
+        }
+}
