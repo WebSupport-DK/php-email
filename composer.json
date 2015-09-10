@@ -4,5 +4,10 @@
         "description": "Simple email classes and wrappers",
         "require": {
         "php": ">=5.4.0"
+        },
+    "autoload": {
+        "psr-4": {
+            "thom855j\\PHPEmail\\": "src/"
+            }
         }
 }
