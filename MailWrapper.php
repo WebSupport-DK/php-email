@@ -1,7 +1,8 @@
 <?php 
 
-namespace thom855j\php_email ; 
-use thom855j\php_email\Message;
+namespace thom855j\PHPEmail ; 
+
+use thom855j\PHPEmail\Message;
 
 class MailWrapper 
 { 
