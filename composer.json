@@ -1,5 +1,6 @@
 {
         "name": "thom855j/php-email",
+        "version": "dev-master",
         "license": "MIT",
         "description": "Simple email classes and wrappers",
         "require": {
