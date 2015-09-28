@@ -1,15 +1,15 @@
 {
-        "name": "thom855j/php-email",
+        "name": "websupport-dk/php-email",
         "version": "dev-master",
         "license": "MIT",
         "description": "Simple email classes and wrappers",
         "require": {
-        "php": ">=5.4.0",
+        "php": ">=5.5.0",
         "phpmailer/phpmailer": "dev-master"
         },
     "autoload": {
         "psr-4": {
-            "thom855j\\PHPEmail\\": "src/"
+            "WebSupportDK\\PHPEmail\\": "src/"
             }
         }
 }
