@@ -1,6 +1,6 @@
 <?php 
 
-namespace thom855j\PHPEmail ; 
+namespace WebSupportDK\PHPEmail ; 
 
 class Mail
 { 
