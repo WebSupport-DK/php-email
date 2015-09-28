@@ -1,9 +1,9 @@
 <?php
 
-namespace thom855j\PHPEmail;
+namespace WebSupportDK\PHPEmail;
 
-use thom855j\PHPEmail\Mail,
-    thom855j\PHPEmail\MailWrapper;
+use WebSupportDK\PHPEmail\Mail,
+    WebSupportDK\PHPEmail\MailWrapper;
 use PHPMailer;
 use SMTP;
 
