@@ -1,8 +1,8 @@
 <?php 
 
-namespace thom855j\PHPEmail ; 
+namespace WebSupportDK\PHPEmail ; 
 
-use thom855j\PHPEmail\Message;
+use WebSupportDK\PHPEmail\Message;
 
 class MailWrapper 
 { 
