@@ -1,5 +1,5 @@
 {
-        "name": "websupport-dk/php-email",
+        "name": "datalaere/php-email",
         "version": "dev-master",
         "license": "MIT",
         "description": "Simple email classes and wrappers",
@@ -9,7 +9,7 @@
         },
     "autoload": {
         "psr-4": {
-            "WebSupportDK\\PHPEmail\\": "src/"
+            "App\\PHPEmail\\": "src/"
             }
         }
 }

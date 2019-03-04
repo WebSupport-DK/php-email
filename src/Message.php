@@ -1,35 +1,30 @@
 <?php 
 
-namespace WebSupportDK\PHPEmail ; 
+namespace App\PHPEmail ; 
 
 class Message 
 { 
 
-    protected 
-            $mailer ; 
+    protected $mailer ; 
 
-    public 
-            function __construct( $mailer ) 
+    public function __construct($mailer) 
     { 
-        $this->mailer = $mailer ; 
+        $this->mailer = $mailer; 
     } 
 
-    public 
-            function to( $address ) 
+    public function to($address) 
     { 
-        $this->mailer->addAddress( $address ) ; 
+        $this->mailer->addAddress($address); 
     } 
 
-    public 
-            function subject( $subject ) 
+    public function subject($subject) 
     { 
-        $this->mailer->Subject = $subject ; 
+        $this->mailer->Subject = $subject; 
     } 
 
-    public 
-            function body( $body ) 
+    public function body($body) 
     { 
-        $this->mailer->Body = $body ; 
+        $this->mailer->Body = $body; 
     } 
 
 } 

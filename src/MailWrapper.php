@@ -1,23 +1,20 @@
 <?php 
 
-namespace WebSupportDK\PHPEmail ; 
+namespace App\PHPEmail; 
 
-use WebSupportDK\PHPEmail\Message;
+use App\PHPEmail\Message;
 
 class MailWrapper 
 { 
 
-    protected 
-            $mailer ; 
+    protected $mailer; 
 
-    public 
-            function __construct( $mailer ) 
+    public function __construct($mailer) 
     { 
         $this->mailer = $mailer ; 
     } 
 
-    public 
-            function send( $template , $data , $callback ) 
+    public function send($template , $data , $callback) 
     { 
         $message = new Message( $this->mailer ) ; 
 
@@ -34,5 +31,5 @@ class MailWrapper
          
         $this->mailer->send(); 
     } 
-
+    
 } 

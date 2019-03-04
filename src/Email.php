@@ -1,9 +1,8 @@
 <?php
 
-namespace WebSupportDK\PHPEmail;
+namespace App\PHPEmail;
 
-use WebSupportDK\PHPEmail\Mail,
-    WebSupportDK\PHPEmail\MailWrapper;
+use App\PHPEmail\Mail, App\PHPEmail\MailWrapper;
 use PHPMailer;
 use SMTP;
 
@@ -11,17 +10,16 @@ class Email
 {
 
     // object instance
-    private static
-            $_instance = null;
+    private static $_instance = null;
+    
     public
             $from,
             $to,
             $subject,
             $template,
-            $data              = array();
+            $data = array();
 
-    public
-            function __construct($db)
+    public function __construct($db)
     {
         parent::__construct($db);
     }
@@ -29,9 +27,7 @@ class Email
     /*
      * Instantiate object
      */
-
-    public static
-            function load($params = null)
+    public static function load($params = null)
     {
         if (!isset(self::$_instance))
         {
@@ -40,8 +36,7 @@ class Email
         return self::$_instance;
     }
 
-    public
-            function send($smtp = false)
+    public function send($smtp = false)
     {
 
         if (!$smtp)
