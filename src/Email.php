@@ -1,8 +1,8 @@
 <?php
 
-namespace App\PHPEmail;
+namespace Datalaere\PHPEmail;
 
-use App\PHPEmail\Mail, App\PHPEmail\MailWrapper;
+use Datalaere\PHPEmail\Mail, Datalaere\PHPEmail\MailWrapper;
 use PHPMailer;
 use SMTP;
 
@@ -29,29 +29,28 @@ class Email
      */
     public static function load($params = null)
     {
-        if (!isset(self::$_instance))
-        {
+        if (!isset(self::$_instance)) {
             self::$_instance = new Email($params);
         }
+
         return self::$_instance;
     }
 
     public function send($smtp = false)
     {
 
-        if (!$smtp)
-        {
+        if (!$smtp) {
             $mailer = new Mail();
 
             $mailer->From = $this->from;
 
             $mail = new MailWrapper($mailer);
 
-            $callback = function($message)
-            {
+            $callback = function($message) {
                 $message->to($this->to);
                 $message->subject($this->subject);
             };
+            
             // send email
             $mail->send($this->template, $this->data, $callback);
         }

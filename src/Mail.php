@@ -1,6 +1,6 @@
 <?php 
 
-namespace App\PHPEmail; 
+namespace Datalaere\PHPEmail; 
 
 class Mail
 { 
@@ -29,11 +29,11 @@ class Mail
 
     public function send() 
     { 
-        $this->Header = "From: $this->From \r\n" ; 
-        $this->Header .= "Content-Type: text/html; charset=UTF-8\r\n" ; 
-        $this->Header .= "Reply-To: $this->From \r\n" ; 
+        $this->Header = "From: $this->From \r\n"; 
+        $this->Header .= "Content-Type: text/html; charset=UTF-8\r\n"; 
+        $this->Header .= "Reply-To: $this->From \r\n"; 
 
-        mail( $this->Address , $this->Subject , $this->Body , $this->Header ) ; 
+       return mail($this->Address, $this->Subject, $this->Body, $this->Header); 
     } 
 
 } 

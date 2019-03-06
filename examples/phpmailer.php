@@ -13,7 +13,7 @@ $mailer->Password   = 'password';
 $mailer->From       = 'test@mail.com'; 
 $mailer->isHTML(true); 
 
-$mail = new thom855j\mail\MailWrapper($mailer); 
+$mail = new Datalaere\mail\MailWrapper($mailer); 
 
 $template = 'welcome_email.php'; 
 $data     = array('Name' => 'Test'); 
@@ -23,4 +23,4 @@ $callback = function($message)
     $message->subject('Test mail'); 
 } ; 
 
-$mail->send( $template , $data , $callback ); 
+$mail->send($template, $data, $callback); 

@@ -1,6 +1,6 @@
 <?php 
 
-namespace App\PHPEmail ; 
+namespace Datalaere\PHPEmail ; 
 
 class Message 
 { 
