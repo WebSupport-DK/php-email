@@ -1,15 +1,15 @@
 {
-        "name": "datalaere/php-email",
-        "version": "dev-master",
-        "license": "MIT",
-        "description": "Simple email classes and wrappers",
-        "require": {
+    "name": "datalaere/php-email",
+    "version": "dev-master",
+    "license": "MIT",
+    "description": "Simple email classes and wrappers",
+    "require": {
         "php": ">=5.5.0",
         "phpmailer/phpmailer": "dev-master"
-        },
+    },
     "autoload": {
         "psr-4": {
             "Datalaere\\PHPEmail\\": "src/"
-            }
         }
+    }
 }
