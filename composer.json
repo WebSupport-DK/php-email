@@ -1,8 +1,10 @@
 {
     "name": "datalaere/php-email",
     "version": "dev-master",
-    "license": "MIT",
+    "type": "library",
     "description": "Simple email classes and wrappers",
+    "homepage": "https://github.com/datalaere/php-email",
+    "license": "MIT",
     "require": {
         "php": ">=5.5.0",
         "phpmailer/phpmailer": "dev-master"
