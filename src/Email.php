@@ -2,7 +2,8 @@
 
 namespace Datalaere\PHPEmail;
 
-use Datalaere\PHPEmail\Mail, Datalaere\PHPEmail\MailWrapper;
+use Datalaere\PHPEmail\Mail;
+use Datalaere\PHPEmail\MailWrapper;
 use PHPMailer;
 use SMTP;
 
@@ -12,12 +13,11 @@ class Email
     // object instance
     private static $_instance = null;
     
-    public
-            $from,
-            $to,
-            $subject,
-            $template,
-            $data = array();
+    public $from;
+    public $to;
+    public $subject;
+    public $template;
+    public $data = array();
 
     public function __construct($db)
     {
@@ -38,7 +38,6 @@ class Email
 
     public function send($smtp = false)
     {
-
         if (!$smtp) {
             $mailer = new Mail();
 
@@ -46,7 +45,7 @@ class Email
 
             $mail = new MailWrapper($mailer);
 
-            $callback = function($message) {
+            $callback = function ($message) {
                 $message->to($this->to);
                 $message->subject($this->subject);
             };
@@ -55,5 +54,4 @@ class Email
             $mail->send($this->template, $this->data, $callback);
         }
     }
-
 }

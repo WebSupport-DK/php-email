@@ -1,35 +1,33 @@
-<?php 
+<?php
 
-namespace Datalaere\PHPEmail; 
+namespace Datalaere\PHPEmail;
 
 use Datalaere\PHPEmail\Message;
 
-class MailWrapper 
-{ 
+class MailWrapper
+{
+    protected $mailer;
 
-    protected $mailer; 
+    public function __construct($mailer)
+    {
+        $this->mailer = $mailer;
+    }
 
-    public function __construct($mailer) 
-    { 
-        $this->mailer = $mailer; 
-    } 
+    public function send($template, $data, $callback)
+    {
+        $message = new Message($this->mailer);
 
-    public function send($template, $data, $callback) 
-    { 
-        $message = new Message($this->mailer); 
+        extract($data);
 
-        extract($data); 
-
-        ob_start(); 
-        require_once $template; 
-        $template = ob_get_clean(); 
-        ob_end_clean(); 
+        ob_start();
+        require_once $template;
+        $template = ob_get_clean();
+        ob_end_clean();
          
-        $message->body($template); 
+        $message->body($template);
          
-        call_user_func($callback, $message); 
+        call_user_func($callback, $message);
          
-        $this->mailer->send(); 
-    } 
-    
-} 
+        $this->mailer->send();
+    }
+}
