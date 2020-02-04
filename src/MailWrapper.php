@@ -1,8 +1,8 @@
 <?php
 
-namespace Datalaere\PHPEmail;
+namespace PHP\Mailer;
 
-use Datalaere\PHPEmail\Message;
+use PHP\Mailer\Message;
 
 class MailWrapper
 {

@@ -1,9 +1,9 @@
 {
-    "name": "datalaere/php-email",
+    "name": "datalaere/php-mailer",
     "version": "dev-master",
     "type": "library",
     "description": "Simple email classes and wrappers",
-    "homepage": "https://github.com/datalaere/php-email",
+    "homepage": "https://github.com/datalaere/php-mailer",
     "license": "MIT",
     "require": {
         "php": ">=5.5.0",
@@ -11,7 +11,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Datalaere\\PHPEmail\\": "src/"
+            "PHP\\Mailer\\": "src/"
         }
     }
 }

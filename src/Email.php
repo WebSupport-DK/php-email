@@ -1,18 +1,15 @@
 <?php
 
-namespace Datalaere\PHPEmail;
+namespace PHP\Mailer;
 
-use Datalaere\PHPEmail\Mail;
-use Datalaere\PHPEmail\MailWrapper;
+use PHP\Mailer\Mail;
+use PHP\Mailer\MailWrapper;
 use PHPMailer;
 use SMTP;
 
 class Email
 {
 
-    // object instance
-    private static $_instance = null;
-    
     public $from;
     public $to;
     public $subject;
@@ -22,18 +19,6 @@ class Email
     public function __construct($db)
     {
         parent::__construct($db);
-    }
-
-    /*
-     * Instantiate object
-     */
-    public static function load($params = null)
-    {
-        if (!isset(self::$_instance)) {
-            self::$_instance = new Email($params);
-        }
-
-        return self::$_instance;
     }
 
     public function send($smtp = false)
